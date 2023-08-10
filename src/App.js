@@ -26,7 +26,7 @@ function App() {
             element={<Home />}
             title="Business opportunities are like buses"
           />
-          <Route path="about" element={<About />} title="About" />
+          <Route path="about" element={<About />} title="About2" />
           <Route path="blog" element={<Blog />} title="Blog" />
           <Route
             path="unsubscribe"
