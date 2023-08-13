@@ -7,21 +7,7 @@ import { Helmet } from 'react-helmet-async';
 
 export const Contact22 = () => {
   const form = useRef();
-    // const form = useRef();
-    // const sendEmail = (e) =>{
-    //     e.preventDefault();
-    //     emailjs.sendForm(
-    //       "service_z8ba50m",
-    //       "template_u595a88",
-    //       form.current,
-    //       "vRU1mCSRVKZ8Mp0Ma"
-    //     ).then(
-    //         result => console.log(result.text),
-    //         error => console.log(error.text)
-    //     );
-    // };
-
-    
+  
     
 
     const [firstNumber, setFirstNumber] = useState(Math.floor(Math.random() * 10) + 1);
@@ -371,15 +357,18 @@ export const Contact22 = () => {
         <Form.Check type="checkbox" label="Agree Terms & Conditions" />
       </Form.Group>
         </Col>
-    </Row>
-    <Row  className='float-end'>   
+        </Row>
+        <Row className="justify-content-md-start mt-3 ">  
         <Col md="auto">
         <p>Solve the following CAPTCHA: <br />
         <div className='float-end'>{firstNumber} + {secondNumber} = </div></p>
         </Col>
         <Col>
+        <FloatingLabel controlId="captcha" label="Captcha">
         <Form.Control type="text"  name="captcha"  value={userAnswer} onChange={handleInputChange} style={{ margin: "0.5rem", width: "100%" }} />
+        </FloatingLabel>
         {captchaError && <p style={{ color: 'red' }}>{captchaError}</p>}
+        
         </Col>
         <Col>    
           <Stack direction="horizontal">
